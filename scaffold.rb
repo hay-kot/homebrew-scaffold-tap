@@ -5,24 +5,24 @@
 class Scaffold < Formula
   desc "Scaffold is a tool for creating new projects from pre-defined templates."
   homepage ""
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   depends_on "go" => :optional
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/hay-kot/scaffold/releases/download/v0.0.2/scaffold_Darwin_arm64.tar.gz"
-      sha256 "0974f6b930ba636da9a577e149f490d124229016503920bb0553751e48ecf81b"
+    if Hardware::CPU.intel?
+      url "https://github.com/hay-kot/scaffold/releases/download/v0.0.3/scaffold_Darwin_x86_64.tar.gz"
+      sha256 "e4a4ccc93fbcf26128501510ff06e36f16be2fd9a041a0b763284e0eddb9afe9"
 
       def install
         bin.install "scaffold"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/hay-kot/scaffold/releases/download/v0.0.2/scaffold_Darwin_x86_64.tar.gz"
-      sha256 "97c0a4219732c95f7babfe95a08ab82fc3bc0c24509d780149f75ccf50fe9cfe"
+    if Hardware::CPU.arm?
+      url "https://github.com/hay-kot/scaffold/releases/download/v0.0.3/scaffold_Darwin_arm64.tar.gz"
+      sha256 "55bbdbf0aef4a079ae7cf03609149a6ba96e7cd9718baf380699d3d7789bc966"
 
       def install
         bin.install "scaffold"
@@ -32,16 +32,16 @@ class Scaffold < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hay-kot/scaffold/releases/download/v0.0.2/scaffold_Linux_arm64.tar.gz"
-      sha256 "9d68ccd71839ed9b9f381ef52c177c5db2e6e0e5b12d4a5ef8becb84a6c72cd0"
+      url "https://github.com/hay-kot/scaffold/releases/download/v0.0.3/scaffold_Linux_arm64.tar.gz"
+      sha256 "a4aa077fc88c0f88e29e7c642c593c582ea9557de8a344b06ea2b7bb989558a7"
 
       def install
         bin.install "scaffold"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hay-kot/scaffold/releases/download/v0.0.2/scaffold_Linux_x86_64.tar.gz"
-      sha256 "5ac1c5b4de60f4dea73f1c66441feae7e9f15e6c0f8d88bc98a5907e6782982a"
+      url "https://github.com/hay-kot/scaffold/releases/download/v0.0.3/scaffold_Linux_x86_64.tar.gz"
+      sha256 "4e686b8c1b9e0a62b6d1153d3e6897dc24213fbabb41d944d91c30780a35aa49"
 
       def install
         bin.install "scaffold"
