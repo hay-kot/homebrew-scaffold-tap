@@ -2,7 +2,7 @@
 cask "scaffold" do
   desc "Scaffold is a tool for creating new projects from pre-defined templates."
   homepage "https://hay-kot.github.io/scaffold/"
-  version "0.10.1"
+  version "0.10.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,30 +16,29 @@ cask "scaffold" do
 
   on_macos do
     on_intel do
-      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.1/scaffold_Darwin_x86_64.tar.gz"
-      sha256 "90c40c15f1092cf0fc93c0ed00e1f2a4f9a060cf7ad42a2ff81637f91bfd0adc"
+      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.2/scaffold_Darwin_x86_64.tar.gz"
+      sha256 "a4dde60eaea457f01ce15c8f92cfac67138f84aca7a301549a8215d569d1c711"
     end
     on_arm do
-      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.1/scaffold_Darwin_arm64.tar.gz"
-      sha256 "f843bd5013d1f04a4fdbdc08d5a810ade817c545f81a0e78746c5b3451c0cc28"
+      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.2/scaffold_Darwin_arm64.tar.gz"
+      sha256 "dee2bed06d126d992ed74f805fde70d88c7b30823f8afdda49e88649026602ab"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.1/scaffold_Linux_x86_64.tar.gz"
-      sha256 "772f033917a6868ba1c5d678735410acb957fde59417edfc9a73f4a800329427"
+      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.2/scaffold_Linux_x86_64.tar.gz"
+      sha256 "c3b5505f7510dbea45fd8935173aa9179b2c2709de6467269867cc9bbdba8499"
     end
     on_arm do
-      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.1/scaffold_Linux_arm64.tar.gz"
-      sha256 "81e9895818093b52f1d602f9bc694ce4b753f63a801fcb220b30c9223c54b766"
+      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.2/scaffold_Linux_arm64.tar.gz"
+      sha256 "686d59051741f48732692aafb8c8e3a05e8a7c296ea530d16307d6e8639ae6d4"
     end
   end
 
   postflight do
     if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
-      # replace 'foo' with the actual binary name
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/foo"]
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/scaffold"]
     end
   end
 
