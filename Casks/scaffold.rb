@@ -2,7 +2,7 @@
 cask "scaffold" do
   desc "Scaffold is a tool for creating new projects from pre-defined templates."
   homepage "https://hay-kot.github.io/scaffold/"
-  version "0.10.2"
+  version "0.10.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,23 +16,23 @@ cask "scaffold" do
 
   on_macos do
     on_intel do
-      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.2/scaffold_Darwin_x86_64.tar.gz"
-      sha256 "a4dde60eaea457f01ce15c8f92cfac67138f84aca7a301549a8215d569d1c711"
+      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.3/scaffold_Darwin_x86_64.tar.gz"
+      sha256 "6c7f61aaafd6996ba09186329c1106f10f0c0b98f9ccf1ce626d2b9184fa2f38"
     end
     on_arm do
-      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.2/scaffold_Darwin_arm64.tar.gz"
-      sha256 "dee2bed06d126d992ed74f805fde70d88c7b30823f8afdda49e88649026602ab"
+      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.3/scaffold_Darwin_arm64.tar.gz"
+      sha256 "9293848bcc643a30e4fe54db4e8bc45e5b99956b3a0b52712d63d05a1c7faba4"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.2/scaffold_Linux_x86_64.tar.gz"
-      sha256 "c3b5505f7510dbea45fd8935173aa9179b2c2709de6467269867cc9bbdba8499"
+      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.3/scaffold_Linux_x86_64.tar.gz"
+      sha256 "1533cfa907a51c1fe146d4d38d1be83b8ee55696eab5c3ba5ba9193bbbbb7a70"
     end
     on_arm do
-      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.2/scaffold_Linux_arm64.tar.gz"
-      sha256 "686d59051741f48732692aafb8c8e3a05e8a7c296ea530d16307d6e8639ae6d4"
+      url "https://github.com/hay-kot/scaffold/releases/download/v0.10.3/scaffold_Linux_arm64.tar.gz"
+      sha256 "1faf5c5b3486ee9d1f6b42bf2d13b49510a934a299fb7c553bf9607b0013d59e"
     end
   end
 
